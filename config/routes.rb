@@ -13,4 +13,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/:username", to: "profiles#show", as: :profile
+  get "/profile/edit", to: "profiles#edit", as: :edit_profile
+  post "/profile", to: "profiles#update"
 end

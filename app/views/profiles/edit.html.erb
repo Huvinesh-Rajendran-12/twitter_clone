@@ -1,0 +1,14 @@
+<h1> Edit Profile </h1>
+'
+<%= form_with(model: @user, url: profile_path, local: true) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :bio %>
+  <%= f.text_field :bio %>
+
+  <%= f.submit 'Update Profile' %>
+<% end %>
